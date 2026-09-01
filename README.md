@@ -1,20 +1,52 @@
-# Hospital Management System — Integrated Build
+# Cavendish International Hospital Management System
 
-This is the connected foundation rather than isolated folder upgrades.
+A full-stack Hospital Management System built with **PHP, MySQL, HTML5, CSS3, and JavaScript** for managing hospital operations including patients, doctors, appointments, pharmacy, billing, and reports.
 
-Core flow:
-Patient registers/login -> books from home -> appointment becomes Pending ->
-Doctor receives request -> doctor changes status -> patient notification ->
-consultation/records/prescription/lab -> pharmacy -> billing/accounting.
+## 🏥 Project Overview
 
-Before production use:
-1. Import database/hospital.sql after the main hospital schema.
-2. Confirm the existing tables/columns match the integrated code.
-3. Configure database credentials using environment variables.
-4. Move secrets out of source files.
-5. Disable directory listing and enable HTTPS.
-6. The current project includes records, pharmacy, laboratory, admissions, billing, messaging, and reporting modules.
+The Cavendish International Hospital Management System is designed to digitize hospital workflows and improve communication between patients, doctors, pharmacists, and administrators.
 
-Hospital branding:
-- Change `CAVENDISH INTERNATIONAL HOSPITAL` in `config/app.php` to set the hospital name.
-- Replace `images/hospital logo.jpeg 1.jpeg` to use a different logo.
+## 🚀 Main Features
+
+### Admin Dashboard
+- Manage patients
+- Manage doctors and staff accounts
+- View appointments
+- Manage pharmacy inventory
+- Billing and payments
+- Generate reports
+
+### Patient Portal
+- Patient registration/login
+- Book appointments
+- View medical records
+- View prescriptions
+- Receive notifications
+
+### Doctor Portal
+- View assigned patients
+- Manage consultations
+- Add diagnosis and prescriptions
+- Update appointment status
+
+### Pharmacy Module
+- Medicine inventory management
+- Prescription tracking
+- Stock monitoring
+
+### Billing Module
+- Generate invoices
+- Track payments
+- Financial reports
+
+## 🛠 Technologies Used
+
+- PHP
+- MySQL Database
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- XAMPP Server
+
+## 📂 Project Structure
