@@ -1,0 +1,281 @@
+.chart-row {
+    display: grid;
+    grid-template-columns: 150px minmax(120px, 1fr) 130px;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+}
+
+.chart-track {
+    height: 14px;
+    overflow: hidden;
+    background: #e4eeee;
+}
+
+.chart-bar {
+    height: 100%;
+    min-width: 3px;
+    background: var(--teal);
+}
+
+.graph-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    min-height: 220px;
+    padding: 20px 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.graph-column {
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    gap: 8px;
+    min-width: 90px;
+    height: 190px;
+}
+
+.graph-column strong {
+    font-size: 11px;
+    text-align: center;
+}
+
+.graph-column-bar {
+    width: 42px;
+    min-height: 4px;
+    background: var(--teal);
+}
+
+.graph-column span {
+    max-width: 100px;
+    overflow-wrap: anywhere;
+    color: #6b7c87;
+    font-size: 11px;
+    text-align: center;
+}
+
+.print-sheet {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #d6d8d9;
+    box-shadow: 0 8px 28px rgba(18, 48, 71, 0.08);
+}
+
+.record-paper {
+    background: #f9fbff;
+    border: 1px solid #b9c9da;
+    border-left: 6px solid #123047;
+    padding: 24px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.record-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #d2dfe9;
+    margin-bottom: 18px;
+}
+
+.record-header h3 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    color: #123047;
+}
+
+.record-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #123047;
+    color: #ffffff;
+    border: 1px solid #123047;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-weight: 700;
+}
+
+.record-meta,
+.record-link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.record-meta div,
+.record-chip {
+    background: #f5f8fa;
+    border: 1px solid #dfe7eb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: grid;
+    gap: 4px;
+}
+
+.record-meta strong,
+.record-chip strong,
+.record-section h4,
+.record-block h4,
+.record-link-panel h4 {
+    color: #123047;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.record-body,
+.record-details {
+    display: grid;
+    gap: 16px;
+}
+
+.record-block,
+.record-link-panel,
+.record-section {
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.record-block p,
+.record-link-panel p,
+.record-chip span,
+.record-meta span,
+.record-block li {
+    margin: 6px 0 0;
+    color: #2a3a46;
+    line-height: 1.6;
+}
+
+.record-link-panel p {
+    margin: 8px 0;
+}
+
+.record-section {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.record-link-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+.record-signature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.signature-line {
+    width: 220px;
+    height: 1px;
+    background: #2a3a46;
+    margin-bottom: 8px;
+}
+
+.invoice-heading,
+.invoice-parties {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.invoice-heading div:first-child,
+.invoice-parties div {
+    display: grid;
+    gap: 6px;
+}
+
+.invoice-heading h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.invoice-heading strong {
+    font-size: 24px;
+    color: var(--teal);
+}
+
+.invoice-parties small {
+    color: #6b7c87;
+    font-weight: 700;
+}
+
+@media print {
+    .no-print,
+    .sidebar,
+    .topbar,
+    .page-actions {
+        display: none !important;
+    }
+
+    .app-shell,
+    .main-content,
+    .content {
+        display: block;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .panel,
+    .card,
+    .print-sheet {
+        border: 0;
+        box-shadow: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .record-paper {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .chart-row {
+        grid-template-columns: 105px minmax(90px, 1fr) 75px;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .print-sheet {
+        padding: 12px;
+    }
+
+    .graph-bars {
+        gap: 12px;
+        overflow-x: auto;
+    }
+
+    .graph-column {
+        min-width: 75px;
+    }
+
+    .invoice-heading,
+    .invoice-parties {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .record-meta,
+    .record-link-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

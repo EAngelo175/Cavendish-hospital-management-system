@@ -1,0 +1,83 @@
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--navy);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 760px) {
+    .app-shell {
+        position: relative;
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 10;
+        inset: 0 auto 0 0;
+        width: 245px;
+        transform: translateX(-100%);
+        transition: transform .25s ease;
+    }
+
+    .sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        min-width: 0;
+    }
+
+    .topbar {
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .topbar-actions {
+        margin-left: auto;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .topbar-actions a:first-child {
+        display: none;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .grid.two,
+    .grid.three {
+        grid-template-columns: 1fr;
+    }
+
+    .page-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+:root {
+    --teal: #123047;
+}
+
+.brand {
+    font-size: 18px;
+}
+
+.topbar > div:first-of-type strong {
+    font-size: 16px;
+}

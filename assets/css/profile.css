@@ -1,0 +1,23 @@
+.profile-photo-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 132px;
+    height: 132px;
+    margin: 4px 0 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--border);
+}
+
+.profile-photo-placeholder {
+    display: grid;
+    place-items: center;
+    color: white;
+    background: var(--teal);
+    font-size: 48px;
+    font-weight: 800;
+}
